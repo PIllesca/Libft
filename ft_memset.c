@@ -1,23 +1,28 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_isalpha.c                                       :+:      :+:    :+:   */
+/*   ft_memset.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: pillesca <pillesca@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/09/11 11:22:08 by pillesca          #+#    #+#             */
-/*   Updated: 2023/09/11 12:29:29 by pillesca         ###   ########.fr       */
+/*   Created: 2023/09/11 12:18:11 by pillesca          #+#    #+#             */
+/*   Updated: 2023/09/11 12:35:00 by pillesca         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-// Función que devuelve distinto de zero si el valor ascii de c es una letra
+// Función que escribre len bytes de la cadena b con el valor recibido en c
+// convertido a Unsigned char
 
-int	ft_isalpha(int c)
+void	*ft_memset(void *b, int c, unsigned long len)
 {
-	if (c >= 'A' && c <= 'Z')
-		return (1);
-	else if (c >= 'a' && c <= 'z')
-		return (2);
-	else
-		return (0);
+	char	*ptr;
+
+	ptr = b;
+	while (len > 0)
+	{
+		*ptr = (unsigned char)c;
+		ptr++;
+		len--;
+	}
+	return (b);
 }

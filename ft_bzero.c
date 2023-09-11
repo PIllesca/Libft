@@ -1,23 +1,27 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_isalpha.c                                       :+:      :+:    :+:   */
+/*   ft_bzero.c                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: pillesca <pillesca@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/09/11 11:22:08 by pillesca          #+#    #+#             */
-/*   Updated: 2023/09/11 12:29:29 by pillesca         ###   ########.fr       */
+/*   Created: 2023/09/11 12:25:00 by pillesca          #+#    #+#             */
+/*   Updated: 2023/09/11 12:36:14 by pillesca         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-// Función que devuelve distinto de zero si el valor ascii de c es una letra
+// Función que escribre n bytes de valor zero en la cadena s
 
-int	ft_isalpha(int c)
+void	ft_bzero(void *s, unsigned long n)
 {
-	if (c >= 'A' && c <= 'Z')
-		return (1);
-	else if (c >= 'a' && c <= 'z')
-		return (2);
-	else
-		return (0);
+	char	*str;
+
+	str = s;
+	while (n > 0)
+	{
+		*str = 0;
+		str++;
+		n--;
+	}
+	return ;
 }

@@ -1,36 +1,29 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strlcat.c                                       :+:      :+:    :+:   */
+/*   ft_strdup.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: pillesca <pillesca@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/09/13 11:40:20 by pillesca          #+#    #+#             */
-/*   Updated: 2023/09/14 13:19:45 by pillesca         ###   ########.fr       */
+/*   Created: 2023/09/14 13:50:59 by pillesca          #+#    #+#             */
+/*   Updated: 2023/09/14 13:58:02 by pillesca         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-// Funcion que concatena src a dst, con un maximo de dstsize caracteres y
-// devuelve la longitud de src + la longitud de dst
+// Función que reserva memoria para una copia de la cadena de caracteres s1
+// copia s1 en la memoria reservada y devuelve un puntero a la nueva cadena.
 
-size_t	strlcat(char *dst, const char *src, size_t dstsize)
+char	*ft_strdup(const char *s1)
 {
-	size_t	i;
+	char	*str;
+	size_t	size;
 
-	i = 0;
-	while (*dst && i < dstsize)
-	{
-		dst++;
-		i++;
-	}
-	while (*src && i + 1 < dstsize)
-	{
-		*dst = *src;
-		i++;
-	}
-	if (i < dstsize)
-		*dst = '\0';
-	return (i + ft_strlen(src));
+	size = ft_strlen(s1);
+	str = ft_calloc(size + 1, sizeof(char));
+	if (!str)
+		return (NULL);
+	ft_memcpy(str, s1, size);
+	return (str);
 }

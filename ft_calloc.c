@@ -1,36 +1,27 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strlcat.c                                       :+:      :+:    :+:   */
+/*   ft_calloc.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: pillesca <pillesca@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/09/13 11:40:20 by pillesca          #+#    #+#             */
-/*   Updated: 2023/09/14 13:19:45 by pillesca         ###   ########.fr       */
+/*   Created: 2023/09/14 13:48:40 by pillesca          #+#    #+#             */
+/*   Updated: 2023/09/14 13:57:09 by pillesca         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-// Funcion que concatena src a dst, con un maximo de dstsize caracteres y
-// devuelve la longitud de src + la longitud de dst
+// Función que reserva memoria para un array de count elementos de tamaño size
+// y devuelve un puntero a la memoria reservada rellenada de bytes 0.
 
-size_t	strlcat(char *dst, const char *src, size_t dstsize)
+void	*ft_calloc(size_t count, size_t size)
 {
-	size_t	i;
+	void	*ptr;
 
-	i = 0;
-	while (*dst && i < dstsize)
-	{
-		dst++;
-		i++;
-	}
-	while (*src && i + 1 < dstsize)
-	{
-		*dst = *src;
-		i++;
-	}
-	if (i < dstsize)
-		*dst = '\0';
-	return (i + ft_strlen(src));
+	ptr = malloc(count * size);
+	if (!ptr)
+		return (NULL);
+	ft_bzero(ptr, count * size);
+	return (ptr);
 }

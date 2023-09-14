@@ -6,7 +6,7 @@
 /*   By: pillesca <pillesca@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/11 11:12:49 by pillesca          #+#    #+#             */
-/*   Updated: 2023/09/13 13:42:18 by pillesca         ###   ########.fr       */
+/*   Updated: 2023/09/14 13:54:57 by pillesca         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,7 @@
 
 # define LIBFT_H
 
-// Incluido para poder usar size_t
+// Incluido para poder usar size_t, NULL y malloc
 # include <stdlib.h>
 
 // Funciones de información sobre caracteres
@@ -27,7 +27,7 @@ int				ft_isprint(int c);
 int				ft_toupper(int c);
 int				ft_tolower(int c);
 // Funciones de información sobre cadenas de caracteres
-size_t			ft_strlen(char *str);
+size_t			ft_strlen(const char *str);
 int				ft_strncmp(char *s1, char *s2, size_t n);
 int				ft_memcmp(const void *s1, const void *s2, size_t n);
 char			*ft_strnstr(char *haystack, char *needle, size_t len);
@@ -42,5 +42,8 @@ size_t			ft_strlcat(char *dst, const char *src, size_t dstsize);
 char			*ft_strchr(char *s, int c);
 char			*ft_strrchr(char *s, int c);
 void			*ft_memchr(const void *s, int c, size_t n);
+// Funciones de manipulación de memoria
+void			*ft_calloc(size_t count, size_t size);
+char			*ft_strdup(const char *s1);
 
 #endif

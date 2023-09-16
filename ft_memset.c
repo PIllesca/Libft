@@ -6,11 +6,11 @@
 /*   By: pillesca <pillesca@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/11 12:18:11 by pillesca          #+#    #+#             */
-/*   Updated: 2023/09/14 13:09:03 by pillesca         ###   ########.fr       */
+/*   Updated: 2023/09/16 12:11:18 by pillesca         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libc.h"
+#include "libft.h"
 
 // Función que escribre len bytes de la cadena b con el valor recibido en c
 // convertido a Unsigned char y devuelve puntero original a b

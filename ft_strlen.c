@@ -6,11 +6,11 @@
 /*   By: pillesca <pillesca@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/11 11:58:33 by pillesca          #+#    #+#             */
-/*   Updated: 2023/09/14 13:21:10 by pillesca         ###   ########.fr       */
+/*   Updated: 2023/09/16 12:11:18 by pillesca         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libc.h"
+#include "libft.h"
 
 // Función que devuelve el tamaño de una cadena, size_t por que size_t
 // no esta declarado por defecto.

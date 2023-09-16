@@ -6,11 +6,11 @@
 /*   By: pillesca <pillesca@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/12 13:19:56 by pillesca          #+#    #+#             */
-/*   Updated: 2023/09/14 13:08:44 by pillesca         ###   ########.fr       */
+/*   Updated: 2023/09/16 12:11:18 by pillesca         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libc.h"
+#include "libft.h"
 
 // Función que copia n bytes de la cadena src a dst y devuelve un puntero a dst.
 

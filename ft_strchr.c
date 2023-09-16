@@ -6,11 +6,11 @@
 /*   By: pillesca <pillesca@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/13 11:55:07 by pillesca          #+#    #+#             */
-/*   Updated: 2023/09/14 13:14:18 by pillesca         ###   ########.fr       */
+/*   Updated: 2023/09/16 12:11:18 by pillesca         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libc.h"
+#include "libft.h"
 
 // Funcion que devuelve la primera ocurrencia de un caracter en una cadena
 // si no lo encuentra devuelve 0

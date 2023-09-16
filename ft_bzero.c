@@ -6,11 +6,11 @@
 /*   By: pillesca <pillesca@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/11 12:25:00 by pillesca          #+#    #+#             */
-/*   Updated: 2023/09/13 12:13:37 by pillesca         ###   ########.fr       */
+/*   Updated: 2023/09/16 12:11:18 by pillesca         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libc.h"
+#include "libft.h"
 
 // Función que escribre n bytes de valor zero en la cadena s
 

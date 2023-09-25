@@ -1,29 +1,32 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_memcpy.c                                        :+:      :+:    :+:   */
+/*   ft_lstclear.c                                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: pillesca <pillesca@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/09/12 12:52:04 by pillesca          #+#    #+#             */
-/*   Updated: 2023/09/22 12:41:58 by pillesca         ###   ########.fr       */
+/*   Created: 2023/09/25 12:53:39 by pillesca          #+#    #+#             */
+/*   Updated: 2023/09/25 13:21:56 by pillesca         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-// Función que copia n bytes de la cadena src a dst y devuelve un puntero a dst.
+// Función que elimina y libera la memoria de todos los nodos de la lista lst
+// usando la función del para borrar el contenido de los nodos. Por último,
+// el puntero inicial de la lista es establecido a NULL.
 
-void	*ft_memcpy(void *dst, const void *src, size_t n)
+void	ft_lstclear(t_list **lst, void (*del)(void*))
 {
-	char	*ptr;
-	char	*str;
+	t_list	*ptr;
 
-	if (dst == NULL && src == NULL)
-		return (dst);
-	ptr = dst;
-	str = (char *)src;
-	while (n--)
-		*ptr++ = *str++;
-	return (dst);
+	if (!lst || !del || !*lst)
+		return ;
+	while (*lst)
+	{
+		ptr = (*lst)->next;
+		ft_lstdelone(*lst, del);
+		*lst = ptr;
+	}
+	*lst = NULL;
 }

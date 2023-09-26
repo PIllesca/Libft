@@ -6,7 +6,7 @@
 /*   By: pillesca <pillesca@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/20 12:53:25 by pillesca          #+#    #+#             */
-/*   Updated: 2023/09/22 16:48:25 by pillesca         ###   ########.fr       */
+/*   Updated: 2023/09/26 11:57:37 by pillesca         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -72,6 +72,8 @@ char	*ft_strtrim(char const *s1, char const *set)
 
 	s1 += ft_firstchar(s1, set);
 	size = ft_lastchar(s1, set);
+	if (size == 0 && !*s1)
+		return (ft_calloc(1, sizeof(char)));
 	str = ft_calloc(size + 2, sizeof(char));
 	if (!str)
 		return (NULL);
